@@ -1,118 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Rahmat Fuadi</title>
-
-    <!-- CSS External -->
-    <link rel="stylesheet" href="css/style.css">
-
-    <!-- Tailwind CSS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Website dengan Logo & Script Terpisah</title>
+  <script src="https://cdn.tailwindcss.com"></script>
 </head>
+<body class="bg-gray-50 font-sans">
 
-<body>
+  <!-- Navbar dengan Logo -->
+  <nav class="bg-blue-600 p-4 shadow-md sticky top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center">
+      <!-- Logo + Nama -->
+      <div class="flex items-center space-x-3">
+        <img src="WhatsApp Image 2025-07-08 at 10.32.46.jpeg" alt="Logo" class="w-10 h-10">
+        <span class="text-white font-bold text-xl">My Website</span>
+      </div>
 
-    <!-- Main Header -->
-    <header class="bg-yellow-500 flex items-center justify-between p-[16px]">
+      <!-- Navigasi -->
+      <ul class="flex space-x-6">
+        <li><a href="#home" class="text-white hover:underline">Home</a></li>
+        <li><a href="#profile" class="text-white hover:underline">Profile</a></li>
+        <li><a href="#portofolio" class="text-white hover:underline">Portofolio</a></li>
+        <li><a href="#contact" class="text-white hover:underline">Message Us</a></li>
+      </ul>
+    </div>
+  </nav>
 
+  <!-- Home Section -->
+  <section id="home" class="h-screen flex flex-col justify-center items-center bg-gradient-to-b from-blue-100 to-blue-200">
+    <h2 id="welcome" class="text-4xl font-bold text-gray-800 mb-4"></h2>
+    <p class="text-lg text-gray-600">Hallo, Perkanalkan Saya Rahmat Fuadi berasal dari Padang, berusia 25 tahun. Saya Lulusan Perpustakaan dan Ilmu Informasi Universitas Negeri Padang dengan pengalaman di bidang administrasi, pelayanan informasi, dan pengelolaan arsip. Terbiasa bekerja secara individu maupun tim, memiliki kemampuan komunikasi yang baik, serta mahir menggunakan Microsoft Office dan platform digital. Berpengalaman menjalankan bisnis sendiri, mengelola media sosial, serta aktif dalam berbagai kegiatan organisasi dan kepanitiaan. Siap berkontribusi dalam dunia kerja sebagai pustakawan, arsiparis, atau staff administrasi.</p>
+  </section>
 
-        <!-- Logo Icon -->
-        <img src="WhatsApp Image 2025-07-08 at 10.32.46.jpeg"
-        <div class="bg-gray-500 rounded-full h-[50px] w-[50px] main-logo"></div>
+  <!-- Profile Section -->
+  <section id="profile" class="py-20 bg-white">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-6">Profile</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto">
+        Hallo semua, Disini saya belajar membuat website sederhana, interaktif, dan responsif menggunakan HTML,Tailwind CSS, JavaScript
+      </p>
+    </div>
+  </section>
 
-        <nav>
-            <ul class="flex gap-[8px]">
-                <li><a href="#home-page"
-                        class="text-gray-700 border py-[4px] px-[8px] rounded-[8px] hover:text-blue-500">Home</a></li>
-                <li><a href="#our-profile"
-                        class="text-gray-700 border py-[4px] px-[8px] rounded-[8px] hover:text-blue-500">Our
-                        Profile</a></li>
-                <li><a href="#portfolio"
-                        class="text-gray-700 border py-[4px] px-[8px] rounded-[8px] hover:text-blue-500">Portfolio</a>
-                </li>
-                <li><a href="#message-us"
-                        class="text-gray-700 border py-[4px] px-[8px] rounded-[8px] hover:text-blue-500">Message
-                        Us</a></li>
-            </ul>
-        </nav>
-    </header>
+  <!-- Portofolio Section -->
+  <section id="portofolio" class="py-20 bg-gray-100">
+    <div class="container mx-auto text-center">
+      <h2 class="text-3xl font-bold mb-10">Portofolio</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <img src="https://picsum.dev/image/1276/400/250" alt="Gambar 1" class="rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+        <img src="https://picsum.dev/image/1199/400/250" alt="Gambar 2" class="rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+        <img src="https://picsum.dev/image/1200/400/250" alt="Gambar 3" class="rounded-xl shadow-lg hover:scale-105 transition-transform duration-300">
+      </div>
+    </div>
+  </section>
 
-    <hr />
+  <!-- Message Us Section -->
+  <section id="contact" class="py-20 bg-gray-100">
+    <div class="container mx-auto max-w-lg bg-white p-8 rounded-xl shadow-lg">
+      <h2 class="text-3xl font-bold mb-6 text-center">Message Us</h2>
+      <form id="messageForm" class="space-y-4">
+        <input type="text" id="name" placeholder="Nama Anda" class="w-full border p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+        <input type="email" id="email" placeholder="Email Anda" class="w-full border p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+        <textarea id="message" placeholder="Tulis pesan Anda..." rows="5" class="w-full border p-3 rounded focus:outline-none focus:ring-2 focus:ring-blue-500" required></textarea>
+        <button type="submit" class="w-full bg-blue-600 text-white p-3 rounded hover:bg-blue-700">Kirim</button>
+      </form>
 
-    <!-- Main content -->
-    <main>
-        <!-- Home -->
-        <section id="home-page" class="h-[400px] bg-gray-100">
-            <div class="bg-zinc-500 bg flex items-center justify-center h-full"> 
-                <h1 class="text-4xl font-bold text-gray-800">Welcome <span id="user-greeting"></span> to Portofolio
-                    Rahmat Fuadi</h1>
-                    
-            </div>
-        </section>
+      <!-- Tempat menampilkan hasil -->
+      <div id="result" class="mt-6 hidden p-4 border rounded bg-green-100 text-green-800"></div>
+    </div>
+  </section>
 
-        <hr />
+  <!-- Footer -->
+  <footer class="bg-blue-600 text-white p-4 text-center">
+    &copy; 2025 Website Rahmat Fuadi. All rights reserved.
+  </footer>
 
-        <!-- Our Profile -->
-        <section id="our-profile" class="bg-teal-500 text-center h-[400px] bg-gray-100">
-            <header>
-                <h1 class="text-4xl font-bold text-gray-800">Our Profile</h1>
-            </header>
-
-            <p class="text-gray-600">Hallo, Perkanalkan Saya Rahmat Fuadi berasal dari Padang, berusia 25 tahun. Saya Lulusan Perpustakaan dan Ilmu Informasi Universitas Negeri Padang dengan pengalaman di bidang administrasi, pelayanan informasi, dan pengelolaan arsip. Terbiasa bekerja secara individu maupun tim, memiliki kemampuan komunikasi yang baik, serta mahir menggunakan Microsoft Office dan platform digital. Berpengalaman menjalankan bisnis sendiri, mengelola media sosial, serta aktif dalam berbagai kegiatan organisasi dan kepanitiaan. Siap berkontribusi dalam dunia kerja sebagai pustakawan, arsiparis, atau staff administrasi.
-            </p>
-        </section>
-
-        <hr />
-
-        <!-- Portfolio -->
-        <section id="portfolio" class="bg-orange-500 text-center h-[400px] bg-gray-100">
-            <header>
-                <h1 class="text-4xl font-bold text-gray-800">Portfolio</h1>
-            </header>
-
-            <p class="font-bold text-left">Pengalaman Organisasi : 
-            </p>
-            <p class="text-left"> Panitia Musyawarah Wilayah HMPII :
-            <br>1. Mengelola seluruh dokumen registrasi dan absensi peserta secara rapi dan terstruktur.
-            <br>2. Menyusun jadwal acara serta memastikan setiap sesi berjalan tepat waktu
-            <br>3. Membangun koordinasi efektif antar-divisi dalam kepanitiaan
-            <br>4. Bertanggung jawab atas pelaporan administrasi dan keuangan selama acara
-            <br>5. Mendukung kelancaran acara dengan memastikan fasilitas peserta tersedia dengan baik.</p>
-            <br>
-            <p class="font-bold text text-left"> Pengalaman Bisnis :
-            <p class="text text-left"> Owner Business :
-            <br>1. Menjual produk makanan beku setiap bulan melalui kanal online (Instagram, WhatsApp) dan offline.
-            <br>2. Meningkatkan engagement media sosial dengan sistem pre-order 2x sebulan, rata-rata penjualan 22 stok/hari.
-            <br>3. Mengelola transaksi, stok barang, dan pengiriman produk secara mandiri untuk efisiensi operasional.
-            <br>4. Membuat konten promosi dan dokumentasi penjualan untuk meningkatkan brand awareness.
-            <br>5. Memberikan pelayanan pelanggan yang responsif, menghasilkan 75% repeat order dari pelanggan tetap.
-        </section>
-
-        <hr />
-
-        <!-- Message Us -->
-        <section id="message-us" class="h-[400px] bg-red-100">
-            <header>
-                <h1 class="text-4xl font-bold text-gray-800">Message Us</h1>
-            </header>
-
-            <form>
-                <label for="user-message" class="block text-gray-700">Your Message:</label>
-                <input id="user-message" type="text" class="border rounded-md w-full p-2"></input>
-                <button type="button" class="mt-2 bg-blue-500 text-white py-2 px-4 rounded-md">Send</button>
-            </form>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="text-center">
-        <span>&copy; 2025 Rahmat Fuadi. Library and Information Science.</span>
-    </footer>
-
-    <!-- JS External -->
-    <script src="js/script.js"></script>
+  <!-- Panggil file JavaScript terpisah -->
+  <script src="script.js"></script>
 </body>
-</html
+</html>
